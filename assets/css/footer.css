@@ -1,0 +1,14 @@
+.footer {
+  width: 100%;
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    font-family: "Marck Script";
+    font-weight: var(--txt-regular);
+}

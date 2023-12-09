@@ -1,0 +1,249 @@
+@media (min-width: 670px) {
+  /*--------------------header.css-------------------- */
+  .container {
+    max-width: var(--container-desktop);
+  }
+  .header {
+    padding: 10px 0;
+  }
+  .header .nav {
+    display: flex;
+  }
+  .header__logo {
+    font-size: 40px;
+  }
+  .header .container {
+    justify-content: space-between;
+    padding: 0 35px;
+  }
+  .burger__menu {
+    display: none;
+  }
+  .header .popup__nav {
+    display: none;
+  }
+  .burger__check {
+    display: none;
+  }
+
+  /*--------------------footer.css-------------------- */
+  .footer {
+    padding: 10px 0;
+  }
+  .footer .container {
+    padding: 0 35px;
+  }
+  .footer__logo {
+    font-size: 25px;
+  }
+  .footer__rights {
+    font-size: 15px;
+  }
+
+  /*--------------------index.css-------------------- */
+  .calculator .container {
+    padding-top: 60px;
+  }
+  .calculator h1 {
+    font-size: 45px;
+  }
+  .calculator__form__wrapper {
+    max-width: 500px;
+    padding: 30px;
+  }
+  .calculator__form__wrapper label {
+    font-size: 20px;
+  }
+  .calculator__form__wrapper select,
+  .calculator__form__wrapper input {
+    height: 20px;
+  }
+  .calculator__products {
+    min-width: 250px;
+    font-size: 20px;
+  }
+  .calculator__button {
+    font-size: 18px;
+    padding: 8px;
+  }
+  .calculator__button:hover {
+    color: var(--color-milk-brown);
+    background-color: var(--color-beige);
+  }
+  .calculator__total {
+    font-size: 30px;
+  }
+  /*--------------------products.css-------------------- */
+  .my__products h1 {
+    font-size: 45px;
+  }
+  .my__products__table {
+    font-size: 20px;
+    width: fit-content;
+  }
+  .my__products__table button {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .my__products__table button:hover {
+    background-color: var(--color-beige);
+    color: var(--color-milk-brown);
+  }
+  .my__products__form__wrapper {
+    max-width: 500px;
+    padding: 30px;
+  }
+  .my__products__form__wrapper label {
+    font-size: 20px;
+  }
+  .my__products__form {
+    gap: 20px;
+  }
+  .my__products__form__wrapper select,
+  .my__products__form__wrapper input {
+    height: 20px;
+  }
+  .my__products__form__button {
+    font-size: 18px;
+  }
+  .my__products__form__button:hover {
+    color: var(--color-milk-brown);
+    background-color: var(--color-beige);
+  }
+
+  /*--------------------contacts.css-------------------- */
+  .contacts h1 {
+    font-size: 45px;
+  }
+  .contacts .container {
+    padding: 60px 0;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 670px) {
+  /*--------------------header.css-------------------- */
+  .container {
+    max-width: var(--container-mobile);
+  }
+  .header {
+    padding: 7px 0;
+  }
+  .burger__menu ~ .popup__nav {
+    display: none;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header__logo {
+    font-size: 35px;
+  }
+  .header .container {
+    justify-content: center;
+  }
+  .burger__menu {
+    display: flex;
+    position: absolute;
+    right: 25px;
+  }
+  .burger__check {
+    position: absolute;
+    right: 25px;
+  }
+  .burger__menu.active ~ .popup__nav {
+    display: flex;
+  }
+  .burger__check {
+    display: initial;
+  }
+
+  /*--------------------footer.css-------------------- */
+  .footer {
+    padding: 8px 0;
+  }
+  .footer .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer__logo {
+    font-size: 20px;
+  }
+  .footer__rights {
+    font-size: 10px;
+  }
+
+  /*--------------------index.css-------------------- */
+  .calculator .container {
+    padding-top: 50px;
+  }
+  .calculator h1 {
+    font-size: 24px;
+  }
+  .calculator__form__wrapper {
+    max-width: 350px;
+    padding: 20px 15px;
+  }
+  .calculator__form__wrapper label {
+    font-size: 15px;
+  }
+  .calculator__products {
+    min-width: 200px;
+    font-size: 15px;
+  }
+  .calculator__button {
+    font-size: 13px;
+  }
+  .calculator__button:active {
+    color: var(--color-milk-brown);
+    background-color: var(--color-beige);
+  }
+  .calculator__total {
+    font-size: 20px;
+  }
+  /*--------------------products.css-------------------- */
+  .my__products .container {
+    padding-top: 50px;
+  }
+  .my__products h1 {
+    font-size: 24px;
+  }
+  .my__products__table {
+    font-size: 13px;
+    width: fit-content;
+    max-width: 350px;
+  }
+  .my__products__table button {
+    font-size: 13px;
+    padding: 8px 0;
+  }
+  .my__products__table button:active {
+    background-color: var(--color-beige);
+    color: var(--color-milk-brown);
+  }
+  .my__products__form__wrapper {
+    max-width: 350px;
+    padding: 20px 15px;
+  }
+  .my__products__form__wrapper label {
+    font-size: 15px;
+  }
+  .my__products__form {
+    gap: 15px;
+  }
+  .my__products__form__button {
+    font-size: 15px;
+  }
+  .my__products__form__button:active {
+    color: var(--color-milk-brown);
+    background-color: var(--color-beige);
+  }
+
+  /*--------------------contacts.css-------------------- */
+  .contacts h1 {
+    font-size: 24px;
+  }
+  .contacts .container {
+    padding: 50px 15px 60px 15px;
+    font-size: 16px;
+  }
+}

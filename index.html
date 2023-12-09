@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/svg/cake-icon.svg" />
+    <link rel="stylesheet" href="./assets/fonts/font.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>Cake Calculator</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a class="header__logo" href="./index.html">Viktoria Tafiy</a>
+            <nav class="nav">
+                <a class="nav__item nav__active" href="./index.html">Calculator</a>
+                <a class="nav__item" href="./pages/products.html">My ingredients</a>
+            </nav>
+            <input class="burger__check" type="checkbox">
+            <div class="burger__menu" id="burgerMenu">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="popup__nav">
+                <a class="nav__item nav__active" href="./index.html">Calculator</a>
+                <a class="nav__item" href="./pages/products.html">My ingredients</a>
+            </div>
+        </div>
+    </header>
+    <section class="calculator">
+        <div class="container">
+            <h1>Calculator</h1>
+            <div class="calculator__form__wrapper">
+                <form class="calculator__form" id="calculatorForm">
+                    <label>
+                        <span>Choose an ingredient:</span>
+                        <select name="name" id="productsSelect">
+                            <option disabled selected>Choose</option>
+                        </select>
+                    </label>
+                    <label>
+                        Enter quantity:
+                        <input type="text" name="amount">
+                        <span id="productType"></span>
+                    </label>
+                    <button class="calculator__button" type="submit">Add ingredient</button>
+                    <span class="exists__alert" id="productExists">*Such an ingredient cannot be added or has already
+                        been added.</span>
+                    <div id="calculatorProductsWrapper"></div>
+                </form>
+                <div class="calculator__buttons__wrapper"><button class="calculator__button"
+                        id="calculateButton">Calculate the cost</button><button class="calculator__button"
+                        id="clearButton">Clear the list</button></div>
+                <div class="calculator__total">
+                    <span>Total:&nbsp</span><span id="total">00.0 UAH</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <a class="footer__logo" href="./index.html">Viktoria Tafiy</a>
+            <span class="footer__rights">© 2024 Viktoria Tafiy. All rights reserved</span>
+        </div>
+    </footer>
+
+    <script src="./script/burgerMenu.js"></script>
+    <script src="./script/calculator.js"></script>
+</body>
+
+</html>

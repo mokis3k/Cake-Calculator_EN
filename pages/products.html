@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/svg/cake-icon.svg" />
+    <link rel="stylesheet" href="../assets/fonts/font.css">
+    <link rel="stylesheet" href="../assets/css/media.css">
+    <link rel="stylesheet" href="../assets/css/products.css">
+    <title>Cake Calculator</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a class="header__logo" href="../index.html">Viktoria Tafiy</a>
+            <nav class="nav">
+                <a class="nav__item" href="../index.html">Calculator</a>
+                <a class="nav__item nav__active" href="./products.html">My ingredients</a>
+            </nav>
+            <input class="burger__check" type="checkbox">
+            <div class="burger__menu" id="burgerMenu">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="popup__nav">
+                <a class="nav__item" href="../index.html">Calculator</a>
+                <a class="nav__item nav__active" href="./products.html">My ingredients</a>
+            </div>
+        </div>
+    </header>
+    <section class="my__products">
+        <div class="container">
+            <h1>My ingredients</h1>
+            <div class="my__products__form__wrapper">
+                <form class="my__products__form" id="addProductForm">
+                    <label>Ingridient's name: <input name="name" type="text"></label>
+                    <label>Units:
+                        <select name="type">
+                            <option disabled selected>Choose</option>
+                            <option value="літр">liter</option>
+                            <option value="мілілітр">milliliter</option>
+                            <option value="грам">gram</option>
+                            <option value="кілограм">kilogram</option>
+                            <option value="штука">piece</option>
+                        </select>
+                    </label>
+                    <label>Price: <input name="price" type="text"><span> UAH</span></label>
+                    <button class="my__products__form__button">Add an ingredient to the table</button>
+                    <span class="exists__alert" id="productExists">*Such an ingredient cannot be added or has already
+                        been added.</span>
+                </form>
+            </div>
+            <div class="my__products__wrapper">
+                <table class="my__products__table" id="productsTable">
+                </table>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <a class="footer__logo" href="../index.html">Viktoria Tafiy</a>
+            <span class="footer__rights">© 2024 Viktoria Tafiy. All rights reserved</span>
+        </div>
+    </footer>
+    <script src="../script/burgerMenu.js"></script>
+    <script src="../script/products.js"></script>
+</body>
+
+</html>

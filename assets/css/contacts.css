@@ -1,0 +1,11 @@
+@import url(./basic.css);
+@import url(./header.css);
+@import url(./footer.css);
+
+.contacts .container {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
