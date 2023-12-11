@@ -66,19 +66,19 @@ const addType = (e) => {
   productsList.map((obj) => {
     if (obj.name === productName) {
       switch (obj.type) {
-        case "штука":
+        case "piece":
           productType.innerHTML = "pieces";
           break;
-        case "літр":
+        case "liter":
           productType.innerHTML = "l";
           break;
-        case "грам":
+        case "gram":
           productType.innerHTML = "gr.";
           break;
-        case "кілограм":
+        case "kilogram":
           productType.innerHTML = "kg";
           break;
-        case "мілілітр":
+        case "milliliter":
           productType.innerHTML = "ml";
           break;
       }
