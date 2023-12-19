@@ -13,6 +13,8 @@ let calculateProductList = [];
 let productsNames = [];
 let productsList = JSON.parse(localStorage.getItem("products"));
 
+console.log(productsList);
+
 calculatorForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -20,7 +22,7 @@ calculatorForm.addEventListener("submit", (e) => {
 
   let product = new FormData(e.target);
   product = Object.fromEntries(product.entries());
-  product.amount = +(product.amount.replaceAll(',', '.'));
+  product.amount = +product.amount.replaceAll(",", ".");
 
   if (!calculatorProducts) createCalculatorProducts();
 
@@ -113,5 +115,13 @@ clearButton.addEventListener("click", (e) => {
   total.innerHTML = "00.0 UAH";
 });
 
-if (!productsList) productsList = [];
+// ========= Adding default products for example =========
+if (!productsList || !productsList.length)
+  productsList = [
+    { name: "Egg", type: "piece", price: 10 },
+    { name: "Milk", type: "liter", price: 70 },
+    { name: "Sugar", type: "kilogram", price: 20 },
+  ];
+localStorage.setItem("products", JSON.stringify(productsList));
+
 getProductsNames();

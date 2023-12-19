@@ -63,17 +63,17 @@ const deleteButtonHandler = (e, obj) => {
   parentTr = e.target.closest(`tr`);
   parentTr.remove();
   productsList = productsList.filter((product) => product !== obj);
-  productsNames = productsNames.filter(product => product !== obj.name)
+  productsNames = productsNames.filter((product) => product !== obj.name);
   localStorage.setItem("products", JSON.stringify(productsList));
 };
 
 addProductForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  productExists.classList.remove("active")
+  productExists.classList.remove("active");
 
   let newProduct = new FormData(e.target);
   newProduct = Object.fromEntries(newProduct.entries());
-  newProduct.price = +(newProduct.price.replaceAll(',', '.'));
+  newProduct.price = +newProduct.price.replaceAll(",", ".");
 
   if (
     productsNames.includes(newProduct.name) ||
@@ -89,5 +89,13 @@ addProductForm.addEventListener("submit", (e) => {
   e.target.reset();
 });
 
-if (!productsList) productsList = [];
+// ========= Adding default products for example =========
+if (!productsList || !productsList.length)
+  productsList = [
+    { name: "Egg", type: "piece", price: 10 },
+    { name: "Milk", type: "liter", price: 70 },
+    { name: "Sugar", type: "kilogram", price: 20 },
+  ];
+localStorage.setItem("products", JSON.stringify(productsList));
+
 renderTable();
